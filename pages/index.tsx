@@ -1,6 +1,6 @@
+import { Container, Grid, GridItem, Text, Button } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
@@ -12,22 +12,30 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1>Price Component branch 2 Price UI</h1>
+      <main>
+        <Container centerContent>
+          <Grid templateColumns="repeat(2, 1fr)" gap={6} p={4} boxShadow="md">
+            <GridItem colSpan={2}>
+              <Text
+                as="h1"
+                fontWeight={["normal", "normal", "bold"]}
+                fontSize={["sm", "md", "lg"]}
+              >
+                Join our community
+              </Text>
+              <Text as="h2">30-day, hassle-free money</Text>
+            </GridItem>
+            <GridItem bg="teal.100">
+              <Text color={"white"}>Monthly Subscription</Text>
+              <Button>Sign Up</Button>
+            </GridItem>
+            <GridItem bg="teal.300">
+              <Text color={"white"}>Why us</Text>
+              <Text>Tutorials by industry experts</Text>
+            </GridItem>
+          </Grid>
+        </Container>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 };
