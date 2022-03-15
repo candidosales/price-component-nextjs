@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1>Price Component</h1>
+        <h1>Price Component branch 2 Price UI</h1>
       </main>
 
       <footer className={styles.footer}>
